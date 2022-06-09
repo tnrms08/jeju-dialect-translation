@@ -15,11 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.contrib import admin
-from django.urls import path
 from dialect import views
+from django.conf.urls.static import static
+from django.conf import settings
+
+"""dialect url 설정"""
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('dialect/', views.Postview.as_view(), name='main_page'),
+    path('trans/', views.Postview.success, name='trans_suc'),
 ]
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
