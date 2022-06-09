@@ -12,3 +12,8 @@
 - pandas
 - konlpy
 - Django
+
+
+### workspace
+
+- Notion
