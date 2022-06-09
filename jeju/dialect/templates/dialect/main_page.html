@@ -1,13 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>jeju dialect web</title>
-    <meta name = "viewport"
-          content = "width=device-width,initial-scale = 1.0">
-</head>
-<body>
-    <h1>{{ msg }}</h1>
-
-</body>
-</html>
+{% extends 'dialect/base.html' %}
+{% load static %}
+<!-- template 확장하기 body interface -->
+{% block content %}
+<!-- Masthead-->
+<div class = box>
+    <div class = "container">
+        <form action="/trans/" method ="post">
+            {% csrf_token %}
+            <input id = "trans" type ="text" name ="content" placeholder="0/500">
+            <input class = "btn" id="trans_btn" type ="submit" value ="번역">
+        </form>
+    </div>
+</div>
+{% endblock content %}

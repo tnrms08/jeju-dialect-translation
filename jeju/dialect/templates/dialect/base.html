@@ -1,0 +1,10 @@
+<!DOCTYPE html> <!-- html의 뼈대 -->
+{% load static %}
+<html lang="en">
+    {% include 'dialect/head.html' %}
+<body>
+    {% include 'dialect/nav.html' %}
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>
