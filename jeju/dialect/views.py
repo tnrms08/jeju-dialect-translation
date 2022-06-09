@@ -23,3 +23,11 @@ class Postview(View):
         return render(request, 'dialect/trans_suc.html',
                       context
                       )
+    def dic(request):
+        word = request.POST.get('dictionary')
+        Word = {
+            'word': word
+        }
+        return render(request, 'dialect/dictionary.html',
+                      Word
+                      )

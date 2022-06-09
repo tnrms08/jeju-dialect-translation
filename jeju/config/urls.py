@@ -25,6 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('dialect/', views.Postview.as_view(), name='main_page'),
     path('trans/', views.Postview.success, name='trans_suc'),
+    path('dictionary/', views.Postview.dic, name='dictionary'),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
