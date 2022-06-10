@@ -5,6 +5,9 @@ from django.views import View
 from django.views.decorators.csrf import csrf_exempt
 
 from .forms import TransForm
+from .models import Dictionary
+
+import csv
 
 # 다양한 방법이 있지만 CLASS 관리 진행
 class Postview(View):
@@ -31,3 +34,245 @@ class Postview(View):
         return render(request, 'dialect/dictionary.html',
                       Word
                       )
+
+lst = []
+
+def dict_list0(request):
+    lst = []
+    path = 'D:\\opensource-project\\dict3.csv'
+    file = open(path, 'r', encoding='UTF8')
+    reader = csv.reader(file)
+    print('-----', reader)
+    for row in reader:
+        lst.append(Dictionary(name=row[1],
+                               contents=row[2]))
+    lst = Dictionary.objects.bulk_create(lst)
+    return render(request, 'dialect/dictionary.html', {'lst': lst})
+    
+def dict_list1(request):
+    lst = []
+    path = 'D:\\opensource-project\\1.csv'
+    file = open(path, 'r', encoding='UTF8')
+    reader = csv.reader(file)
+    print('-----', reader)
+    for row in reader:
+        lst.append(Dictionary(name=row[1],
+                               contents=row[2]))
+    lst = Dictionary.objects.bulk_create(lst)
+    return render(request, 'dialect/dict_list1.html', {'lst': lst})
+
+def dict_list2(request):
+    lst = []
+    path = 'D:\\opensource-project\\2.csv'
+    file = open(path, 'r', encoding='UTF8')
+    reader = csv.reader(file)
+    print('-----', reader)
+    for row in reader:
+        lst.append(Dictionary(name=row[1],
+                               contents=row[2]))
+    lst = Dictionary.objects.bulk_create(lst)
+    return render(request, 'dialect/dict_list2.html', {'lst': lst})
+
+def dict_list3(request):
+    lst = []
+    path = 'D:\\opensource-project\\3.csv'
+    file = open(path, 'r', encoding='UTF8')
+    reader = csv.reader(file)
+    print('-----', reader)
+    for row in reader:
+        lst.append(Dictionary(name=row[1],
+                               contents=row[2]))
+    lst = Dictionary.objects.bulk_create(lst)
+    return render(request, 'dialect/dict_list3.html', {'lst': lst})
+
+def dict_list4(request):
+    lst = []
+    path = 'D:\\opensource-project\\4.csv'
+    file = open(path, 'r', encoding='UTF8')
+    reader = csv.reader(file)
+    print('-----', reader)
+    for row in reader:
+        lst.append(Dictionary(name=row[1],
+                               contents=row[2]))
+    lst = Dictionary.objects.bulk_create(lst)
+    return render(request, 'dialect/dict_list4.html', {'lst': lst})
+
+def dict_list5(request):
+    lst = []
+    path = 'D:\\opensource-project\\5.csv'
+    file = open(path, 'r', encoding='UTF8')
+    reader = csv.reader(file)
+    print('-----', reader)
+    for row in reader:
+        lst.append(Dictionary(name=row[1],
+                               contents=row[2]))
+    lst = Dictionary.objects.bulk_create(lst)
+    return render(request, 'dialect/dict_list5.html', {'lst': lst})
+
+def dict_list6(request):
+    lst = []
+    path = 'D:\\opensource-project\\6.csv'
+    file = open(path, 'r', encoding='UTF8')
+    reader = csv.reader(file)
+    print('-----', reader)
+    for row in reader:
+        lst.append(Dictionary(name=row[1],
+                               contents=row[2]))
+    lst = Dictionary.objects.bulk_create(lst)
+    return render(request, 'dialect/dict_list6.html', {'lst': lst})
+
+def dict_list7(request):
+    lst = []
+    path = 'D:\\opensource-project\\7.csv'
+    file = open(path, 'r', encoding='UTF8')
+    reader = csv.reader(file)
+    print('-----', reader)
+    for row in reader:
+        lst.append(Dictionary(name=row[1],
+                               contents=row[2]))
+    lst = Dictionary.objects.bulk_create(lst)
+    return render(request, 'dialect/dict_list7.html', {'lst': lst})
+
+def dict_list8(request):
+    lst = []
+    path = 'D:\\opensource-project\\8.csv'
+    file = open(path, 'r', encoding='UTF8')
+    reader = csv.reader(file)
+    print('-----', reader)
+    for row in reader:
+        lst.append(Dictionary(name=row[1],
+                               contents=row[2]))
+    lst = Dictionary.objects.bulk_create(lst)
+    return render(request, 'dialect/dict_list8.html', {'lst': lst})
+
+def dict_list9(request):
+    lst = []
+    path = 'D:\\opensource-project\\9.csv'
+    file = open(path, 'r', encoding='UTF8')
+    reader = csv.reader(file)
+    print('-----', reader)
+    for row in reader:
+        lst.append(Dictionary(name=row[1],
+                               contents=row[2]))
+    lst = Dictionary.objects.bulk_create(lst)
+    return render(request, 'dialect/dict_list9.html', {'lst': lst})
+
+def dict_list10(request):
+    lst = []
+    path = 'D:\\opensource-project\\10.csv'
+    file = open(path, 'r', encoding='UTF8')
+    reader = csv.reader(file)
+    print('-----', reader)
+    for row in reader:
+        lst.append(Dictionary(name=row[1],
+                               contents=row[2]))
+    lst = Dictionary.objects.bulk_create(lst)
+    return render(request, 'dialect/dict_list10.html', {'lst': lst})
+
+def dict_list11(request):
+    lst = []
+    path = 'D:\\opensource-project\\11.csv'
+    file = open(path, 'r', encoding='UTF8')
+    reader = csv.reader(file)
+    print('-----', reader)
+    for row in reader:
+        lst.append(Dictionary(name=row[1],
+                               contents=row[2]))
+    lst = Dictionary.objects.bulk_create(lst)
+    return render(request, 'dialect/dict_list11.html', {'lst': lst})
+
+def dict_list12(request):
+    lst = []
+    path = 'D:\\opensource-project\\12.csv'
+    file = open(path, 'r', encoding='UTF8')
+    reader = csv.reader(file)
+    print('-----', reader)
+    for row in reader:
+        lst.append(Dictionary(name=row[1],
+                               contents=row[2]))
+    lst = Dictionary.objects.bulk_create(lst)
+    return render(request, 'dialect/dict_list12.html', {'lst': lst})
+
+def dict_list13(request):
+    lst = []
+    path = 'D:\\opensource-project\\13.csv'
+    file = open(path, 'r', encoding='UTF8')
+    reader = csv.reader(file)
+    print('-----', reader)
+    for row in reader:
+        lst.append(Dictionary(name=row[1],
+                               contents=row[2]))
+    lst = Dictionary.objects.bulk_create(lst)
+    return render(request, 'dialect/dict_list13.html', {'lst': lst})
+
+def dict_list14(request):
+    lst = []
+    path = 'D:\\opensource-project\\14.csv'
+    file = open(path, 'r', encoding='UTF8')
+    reader = csv.reader(file)
+    print('-----', reader)
+    for row in reader:
+        lst.append(Dictionary(name=row[1],
+                               contents=row[2]))
+    lst = Dictionary.objects.bulk_create(lst)
+    return render(request, 'dialect/dict_list14.html', {'lst': lst})
+
+def dict_list15(request):
+    lst = []
+    path = 'D:\\opensource-project\\15.csv'
+    file = open(path, 'r', encoding='UTF8')
+    reader = csv.reader(file)
+    print('-----', reader)
+    for row in reader:
+        lst.append(Dictionary(name=row[1],
+                               contents=row[2]))
+    lst = Dictionary.objects.bulk_create(lst)
+    return render(request, 'dialect/dict_list15.html', {'lst': lst})
+
+def dict_list16(request):
+    lst = []
+    path = 'D:\\opensource-project\\16.csv'
+    file = open(path, 'r', encoding='UTF8')
+    reader = csv.reader(file)
+    print('-----', reader)
+    for row in reader:
+        lst.append(Dictionary(name=row[1],
+                               contents=row[2]))
+    lst = Dictionary.objects.bulk_create(lst)
+    return render(request, 'dialect/dict_list16.html', {'lst': lst})
+
+def dict_list17(request):
+    lst = []
+    path = 'D:\\opensource-project\\17.csv'
+    file = open(path, 'r', encoding='UTF8')
+    reader = csv.reader(file)
+    print('-----', reader)
+    for row in reader:
+        lst.append(Dictionary(name=row[1],
+                               contents=row[2]))
+    lst = Dictionary.objects.bulk_create(lst)
+    return render(request, 'dialect/dict_list17.html', {'lst': lst})
+
+def dict_list18(request):
+    lst = []
+    path = 'D:\\opensource-project\\18.csv'
+    file = open(path, 'r', encoding='UTF8')
+    reader = csv.reader(file)
+    print('-----', reader)
+    for row in reader:
+        lst.append(Dictionary(name=row[1],
+                               contents=row[2]))
+    lst = Dictionary.objects.bulk_create(lst)
+    return render(request, 'dialect/dict_list18.html', {'lst': lst})
+
+def dict_list19(request):
+    lst = []
+    path = 'D:\\opensource-project\\19.csv'
+    file = open(path, 'r', encoding='UTF8')
+    reader = csv.reader(file)
+    print('-----', reader)
+    for row in reader:
+        lst.append(Dictionary(name=row[1],
+                               contents=row[2]))
+    lst = Dictionary.objects.bulk_create(lst)
+    return render(request, 'dialect/dict_list19.html', {'lst': lst})
