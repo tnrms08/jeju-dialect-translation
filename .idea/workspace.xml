@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="84bf5fe8-c8a4-4be0-9a7d-7743c159120b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jeju/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jeju/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jeju/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jeju/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/jeju/db.sqlite3" afterDir="false" />
-    </list>
+    <list default="true" id="84bf5fe8-c8a4-4be0-9a7d-7743c159120b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
