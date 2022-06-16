@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\0106y\OneDrive\바탕 화면\translate\venv"
+VIRTUAL_ENV="C:\Users\0106y\OneDrive\문서\jeju-dialect-translation\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\0106y\OneDrive\바탕 화면\translate\venv
+set VIRTUAL_ENV=C:\Users\0106y\OneDrive\문서\jeju-dialect-translation\venv
 
 if not defined PROMPT set PROMPT=$P$G
 

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/translate.iml" filepath="$PROJECT_DIR$/.idea/translate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/jeju-dialect-translation.iml" filepath="$PROJECT_DIR$/.idea/jeju-dialect-translation.iml" />
     </modules>
   </component>
 </project>
