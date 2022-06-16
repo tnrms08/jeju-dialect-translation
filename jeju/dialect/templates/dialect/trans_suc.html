@@ -10,11 +10,7 @@
             <input id = "trans" type ="text" name ="content" placeholder="0/500">
             <input class = "btn" id="trans_btn" type ="submit" value ="번역">
         </form>
-        <!--{{ content }}-->
-
-        <!--{{ context }}-->
-
-        <!--
+        
         {% for key, value in context.items %}
         <div>
             <table>
@@ -25,32 +21,8 @@
             </table>
         </div>
         {% endfor %}
-        -->
-
         
-        <div>
-            <table>
-                {% for key, value in context.items %}
-                <tr>
-                    <td>{{ value }}</td>
-                </tr>
-                {% endfor %}
-            </table>
-        </div>
         
-
-        <!--
-        {% for key, value in context.items %}
-        <div>
-            <table>
-                <tr>
-                    <td>{{ key }}</td>
-                    <td>{{ value }}</td>
-                </tr>
-            </table>
-        </div>
-        {% endfor %}
-        -->
 
     </div>
 </div>

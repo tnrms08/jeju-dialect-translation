@@ -15,6 +15,7 @@ import re
 import csv
 
 # 다양한 방법이 있지만 CLASS 관리 진행
+
 class Postview(View):
     def get(self, request):
         massage = "hello"
@@ -23,14 +24,9 @@ class Postview(View):
                       )
 
     @csrf_exempt
+
     def success(request):
         content = request.POST.get('content')
-        
-        '''
-        context = {
-            'content': content
-        }
-        '''
 
         dict = pd.read_csv("..\csv_flie\dictT.csv", sep=",", encoding='cp949')
         
@@ -38,17 +34,15 @@ class Postview(View):
         okt = Okt()
 
         nouns = hannanum.nouns(content)
-
         stem = okt.morphs(content, stem = True)
 
-        tempt=[]
+        tmp=[]
 
         for i in range(0, len(stem)):
             if (len(stem[i]) == 1):
-                tempt.append(stem[i])
+                tmp.append(stem[i])
 
-        adjective = list(set(stem) - set(tempt))
-
+        adjective = list(set(stem) - set(tmp))
         results = pd.DataFrame(columns = {'siteName', 'contents'})
 
         for i in nouns:
@@ -60,15 +54,31 @@ class Postview(View):
             y = dict[dict['siteName'].str.match(i)]
             results = pd.concat([results, y], axis = 0)
 
-        result = results.drop_duplicates()
-        result = result.to_dict()
+        temp = results.drop_duplicates()
+        dic = temp.to_dict()
 
-        '''
-        for value in result.items:
-            value = re.compile('[ㄱ-ㅎ|ㅏ-ㅣ]+').findall(value)
+        han = re.compile('[가-힣\s]+')
 
-        print(result)
-        '''
+        ex=[]
+        
+        for value in dic.items():
+            x=str(value)
+            value = han.findall(x)
+            ex.append(value)
+
+        k=ex[0]
+        v=ex[1]
+
+        space = {' '}
+
+        k = [i for i in k if i not in space]
+        v = [i for i in v if i not in space]
+
+        result = { }
+
+        for i in range(len(k)):
+            result[k[i]]=v[i]
+        
 
         return render(request, 'dialect/trans_suc.html',
                       { 'context': result}
