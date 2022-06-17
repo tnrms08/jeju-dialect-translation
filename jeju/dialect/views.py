@@ -78,12 +78,14 @@ class Postview(View):
 
         for i in range(len(k)):
             result[k[i]]=v[i]
-        
 
+        a = {
+            'context': result,
+            'content': content
+        }
         return render(request, 'dialect/trans_suc.html',
-                      { 'context': result}
+                      a
                       )
-
 
     def dic(request):
         word = request.POST.get('dictionary')
@@ -98,7 +100,7 @@ lst = []
 
 def dict_list0(request):
     lst = []
-    path = 'C:\\Users\\user\\Documents\\jeju-dialect-translation\\csv_flie\\dict3.csv'
+    path = 'C:\\Users\\0106y\\OneDrive\\문서\\jeju-dialect-translation\\csv_flie\\dict3.csv'
     file = open(path, 'r', encoding='UTF8')
     reader = csv.reader(file)
     print('-----', reader)
@@ -110,7 +112,7 @@ def dict_list0(request):
     
 def dict_list1(request):
     lst = []
-    path = 'C:\\Users\\user\\Documents\\jeju-dialect-translation\\csv_flie\\1.csv'
+    path = 'C:\\Users\\0106y\\OneDrive\\문서\\jeju-dialect-translation\\csv_flie\\1.csv'
     file = open(path, 'r', encoding='UTF8')
     reader = csv.reader(file)
     print('-----', reader)
@@ -122,7 +124,7 @@ def dict_list1(request):
 
 def dict_list2(request):
     lst = []
-    path = 'C:\\Users\\user\\Documents\\jeju-dialect-translation\\csv_flie\\2.csv'
+    path = 'C:\\Users\\0106y\\OneDrive\\문서\\jeju-dialect-translation\\csv_flie\\2.csv'
     file = open(path, 'r', encoding='UTF8')
     reader = csv.reader(file)
     print('-----', reader)
@@ -134,7 +136,7 @@ def dict_list2(request):
 
 def dict_list3(request):
     lst = []
-    path = 'C:\\Users\\user\\Documents\\jeju-dialect-translation\\csv_flie\\3.csv'
+    path = 'C:\\Users\\0106y\\OneDrive\\문서\\jeju-dialect-translation\\csv_flie\\3.csv'
     file = open(path, 'r', encoding='UTF8')
     reader = csv.reader(file)
     print('-----', reader)
@@ -146,7 +148,7 @@ def dict_list3(request):
 
 def dict_list4(request):
     lst = []
-    path = 'C:\\Users\\user\\Documents\\jeju-dialect-translation\\csv_flie\\4.csv'
+    path = 'C:\\Users\\0106y\\OneDrive\\문서\\jeju-dialect-translation\\csv_flie\\4.csv'
     file = open(path, 'r', encoding='UTF8')
     reader = csv.reader(file)
     print('-----', reader)
@@ -158,7 +160,7 @@ def dict_list4(request):
 
 def dict_list5(request):
     lst = []
-    path = 'C:\\Users\\user\\Documents\\jeju-dialect-translation\\csv_flie\\5.csv'
+    path = 'C:\\Users\\0106y\\OneDrive\\문서\\jeju-dialect-translation\\csv_flie\\5.csv'
     file = open(path, 'r', encoding='UTF8')
     reader = csv.reader(file)
     print('-----', reader)
@@ -170,7 +172,7 @@ def dict_list5(request):
 
 def dict_list6(request):
     lst = []
-    path = 'C:\\Users\\user\\Documents\\jeju-dialect-translation\\csv_flie\\6.csv'
+    path = 'C:\\Users\\0106y\\OneDrive\\문서\\jeju-dialect-translation\\csv_flie\\6.csv'
     file = open(path, 'r', encoding='UTF8')
     reader = csv.reader(file)
     print('-----', reader)
@@ -182,7 +184,7 @@ def dict_list6(request):
 
 def dict_list7(request):
     lst = []
-    path = 'C:\\Users\\user\\Documents\\jeju-dialect-translation\\csv_flie\\7.csv'
+    path = 'C:\\Users\\0106y\\OneDrive\\문서\\jeju-dialect-translation\\csv_flie\\7.csv'
     file = open(path, 'r', encoding='UTF8')
     reader = csv.reader(file)
     print('-----', reader)
@@ -194,7 +196,7 @@ def dict_list7(request):
 
 def dict_list8(request):
     lst = []
-    path = 'C:\\Users\\user\\Documents\\jeju-dialect-translation\\csv_flie\\8.csv'
+    path = 'C:\\Users\\0106y\\OneDrive\\문서\\jeju-dialect-translation\\csv_flie\\8.csv'
     file = open(path, 'r', encoding='UTF8')
     reader = csv.reader(file)
     print('-----', reader)
@@ -206,7 +208,7 @@ def dict_list8(request):
 
 def dict_list9(request):
     lst = []
-    path = 'C:\\Users\\user\\Documents\\jeju-dialect-translation\\csv_flie\\9.csv'
+    path = 'C:\\Users\\0106y\\OneDrive\\문서\\jeju-dialect-translation\\csv_flie\\9.csv'
     file = open(path, 'r', encoding='UTF8')
     reader = csv.reader(file)
     print('-----', reader)
@@ -218,7 +220,7 @@ def dict_list9(request):
 
 def dict_list10(request):
     lst = []
-    path = 'C:\\Users\\user\\Documents\\jeju-dialect-translation\\csv_flie\\10.csv'
+    path = 'C:\\Users\\0106y\\OneDrive\\문서\\jeju-dialect-translation\\csv_flie\\10.csv'
     file = open(path, 'r', encoding='UTF8')
     reader = csv.reader(file)
     print('-----', reader)
@@ -230,7 +232,7 @@ def dict_list10(request):
 
 def dict_list11(request):
     lst = []
-    path = 'C:\\Users\\user\\Documents\\jeju-dialect-translation\\csv_flie\\11.csv'
+    path = 'C:\\Users\\0106y\\OneDrive\\문서\\jeju-dialect-translation\\csv_flie\\11.csv'
     file = open(path, 'r', encoding='UTF8')
     reader = csv.reader(file)
     print('-----', reader)
@@ -242,7 +244,7 @@ def dict_list11(request):
 
 def dict_list12(request):
     lst = []
-    path = 'C:\\Users\\user\\Documents\\jeju-dialect-translation\\csv_flie\\12.csv'
+    path = 'C:\\Users\\0106y\\OneDrive\\문서\\jeju-dialect-translation\\csv_flie\\12.csv'
     file = open(path, 'r', encoding='UTF8')
     reader = csv.reader(file)
     print('-----', reader)
@@ -254,7 +256,7 @@ def dict_list12(request):
 
 def dict_list13(request):
     lst = []
-    path = 'C:\\Users\\user\\Documents\\jeju-dialect-translation\\csv_flie\\13.csv'
+    path = 'C:\\Users\\0106y\\OneDrive\\문서\\jeju-dialect-translation\\csv_flie\\13.csv'
     file = open(path, 'r', encoding='UTF8')
     reader = csv.reader(file)
     print('-----', reader)
@@ -266,7 +268,7 @@ def dict_list13(request):
 
 def dict_list14(request):
     lst = []
-    path = 'C:\\Users\\user\\Documents\\jeju-dialect-translation\\csv_flie\\14.csv'
+    path = 'C:\\Users\\0106y\\OneDrive\\문서\\jeju-dialect-translation\\csv_flie\\14.csv'
     file = open(path, 'r', encoding='UTF8')
     reader = csv.reader(file)
     print('-----', reader)
@@ -278,7 +280,7 @@ def dict_list14(request):
 
 def dict_list15(request):
     lst = []
-    path = 'C:\\Users\\user\\Documents\\jeju-dialect-translation\\csv_flie\\15.csv'
+    path = 'C:\\Users\\0106y\\OneDrive\\문서\\jeju-dialect-translation\\csv_flie\\15.csv'
     file = open(path, 'r', encoding='UTF8')
     reader = csv.reader(file)
     print('-----', reader)
@@ -290,7 +292,7 @@ def dict_list15(request):
 
 def dict_list16(request):
     lst = []
-    path = 'C:\\Users\\user\\Documents\\jeju-dialect-translation\\csv_flie\\16.csv'
+    path = 'C:\\Users\\0106y\\OneDrive\\문서\\jeju-dialect-translation\\csv_flie\\16.csv'
     file = open(path, 'r', encoding='UTF8')
     reader = csv.reader(file)
     print('-----', reader)
@@ -302,7 +304,7 @@ def dict_list16(request):
 
 def dict_list17(request):
     lst = []
-    path = 'C:\\Users\\user\\Documents\\jeju-dialect-translation\\csv_flie\\17.csv'
+    path = 'C:\\Users\\0106y\\OneDrive\\문서\\jeju-dialect-translation\\csv_flie\\17.csv'
     file = open(path, 'r', encoding='UTF8')
     reader = csv.reader(file)
     print('-----', reader)
@@ -314,7 +316,7 @@ def dict_list17(request):
 
 def dict_list18(request):
     lst = []
-    path = 'C:\\Users\\user\\Documents\\jeju-dialect-translation\\csv_flie\\18.csv'
+    path = 'C:\\Users\\0106y\\OneDrive\\문서\\jeju-dialect-translation\\csv_flie\\18.csv'
     file = open(path, 'r', encoding='UTF8')
     reader = csv.reader(file)
     print('-----', reader)
@@ -326,7 +328,7 @@ def dict_list18(request):
 
 def dict_list19(request):
     lst = []
-    path = 'C:\\Users\\user\\Documents\\jeju-dialect-translation\\csv_flie\\19.csv'
+    path = 'C:\\Users\\0106y\\OneDrive\\문서\\jeju-dialect-translation\\csv_flie\\19.csv'
     file = open(path, 'r', encoding='UTF8')
     reader = csv.reader(file)
     print('-----', reader)

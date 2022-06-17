@@ -3,14 +3,15 @@
 <!-- template 확장하기 body interface -->
 {% block content %}
 <!-- Masthead-->
-<div class = box>
-    <div class = "container">
+
+<div id = "dic_container">
+    <div class = "container" >
         <form action="dictionary/" method ="post">
             {% csrf_token %}
             <input id = "dic" type ="text" name ="content" placeholder="검색하세요">
             <input class = "btn" id="search" type ="submit" value ="검색">
         </form>
-        <div>
+        <div class = "k_menu">
             <a href="dictionary.html">전체</a>
             <a href="dict_list1.html">ㄱ</a>
             <a href="dict_list2.html">ㄲ</a>
@@ -33,12 +34,13 @@
             <a href="dict_list19.html">ㅎ</a>
         </div>
         {% for i in lst %}
-        <div>
+        <div class = "dic_container">
             <table>
                 <tr>
-                    <td>{{ i.name }}</td>
+                    <td class = "text_name">{{ i.name }}</td>
                     <td>{{ i.contents }}</td>
                 </tr>
+            </table>
         </div>
         {% endfor %}
     </div>

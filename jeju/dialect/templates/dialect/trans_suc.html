@@ -1,3 +1,4 @@
+
 {% extends 'dialect/base.html' %}
 {% load static %}
 <!-- template 확장하기 body interface -->
@@ -10,9 +11,9 @@
             <input id = "trans" type ="text" name ="content" placeholder="0/500">
             <input class = "btn" id="trans_btn" type ="submit" value ="번역">
         </form>
-        
+        <div class = "quest">{{ content }}</div>
         {% for key, value in context.items %}
-        <div>
+        <div class = trans_success>
             <table>
                 <tr>
                     <td>{{ key }}</td>
@@ -21,8 +22,8 @@
             </table>
         </div>
         {% endfor %}
-        
-        
+
+
 
     </div>
 </div>
